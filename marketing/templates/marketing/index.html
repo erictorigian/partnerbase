@@ -1,110 +1,471 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PartnerBase – The Consultant's Operating System</title>
+    <title>PartnerBase – The Operating System for Elite Independent Professionals | Fractional Executive Platform</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="PartnerBase helps solo professionals look, operate, and win like a world-class firm. Built by fractional HR pioneer Eric Torigian, it's the complete operating system for consultants and fractional executives.">
+    <meta name="keywords" content="fractional executive, consultant operating system, HR consulting, fractional HR, business consulting, client management, proposal builder, WorkLedger">
+    <meta name="author" content="Eric Torigian">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="PartnerBase – The Operating System for Elite Independent Professionals">
+    <meta property="og:description" content="Built by fractional HR pioneer Eric Torigian, PartnerBase helps solo professionals look, operate, and win like a world-class firm.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://partnerbase.org">
+    <meta property="og:image" content="{% static 'marketing/img/og-image.jpg' %}">
+    <meta property="og:site_name" content="PartnerBase">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PartnerBase – The Operating System for Elite Independent Professionals">
+    <meta name="twitter:description" content="Built by fractional HR pioneer Eric Torigian, PartnerBase helps solo professionals look, operate, and win like a world-class firm.">
+    <meta name="twitter:image" content="{% static 'marketing/img/twitter-image.jpg' %}">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://partnerbase.org">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'marketing/img/favicon.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'marketing/img/apple-touch-icon.png' %}">
+    
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Tailwind CDN (for utility classes) -->
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Custom CSS -->
-    {% load static %}
     <link href="{% static 'marketing/css/styles.css' %}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "PartnerBase",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/PreOrder"
+        },
+        "description": "PartnerBase helps solo professionals look, operate, and win like a world-class firm — with the systems, tools, and proof to back it up.",
+        "featureList": [
+            "Smart Proposal Builder",
+            "Client Command Center",
+            "WorkLedger™ Reputation System",
+            "Time Tracking & Invoicing",
+            "Partner Network"
+        ],
+        "author": {
+            "@type": "Person",
+            "name": "Eric Torigian",
+            "jobTitle": "President of LERA",
+            "description": "Pioneer in fractional HR and operations consulting"
+        }
+    }
+    </script>
 </head>
 <body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar text-center py-2" role="alert">
+        <div class="container">
+            <span class="badge bg-warning text-dark me-2">Early Access</span>
+            <span>Limited spots available for founding members</span>
+        </div>
+    </div>
+
     <!-- Hero Section -->
-    <section class="hero text-center mb-5">
+    <section class="hero text-center" aria-labelledby="hero-title">
         <div class="container py-5">
-            <h1 class="fade-in">PartnerBase – The Consultant's Operating System</h1>
-            <p class="lead mb-4 fade-in">Built for fractional executives and solopreneurs.</p>
-            <a href="#waitlist" class="btn btn-dark btn-lg shadow fade-in">Join the Waitlist</a>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <span class="badge bg-light text-dark mb-3 px-3 py-2 fade-in">By Fractional Leaders, For Fractional Leaders</span>
+                    <h1 id="hero-title" class="mega-title fade-in">The Operating System for Fractional Leaders, Consultants & Solo Executives</h1>
+                    <p class="lead mb-4 fade-in">Built by a career HR executive and operator who's helped Fortune 5 giants and teams of 5 scale with structure, systems, and speed — PartnerBase gives you the tools to legitimize your solo practice, automate your back office, and win like a firm.</p>
+                    
+                    <div class="hero-intro mb-5 fade-in">
+                        <p>I've built consulting practices, closed six-figure retainers, run executive search firms, and stood up HR operations for private equity carve-outs — all as a solo or fractional leader. PartnerBase is the platform I wish I had: a clean, professional operating system that helps independents look credible, stay organized, and scale smarter.</p>
+                    </div>
+
+                    <div class="cta-group mb-4 fade-in">
+                        <a href="#waitlist" class="btn btn-dark btn-lg shadow-lg me-3" aria-label="Join the waitlist">Join the Waitlist <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i></a>
+                        <a href="#how-it-works" class="btn btn-outline-dark btn-lg" aria-label="Learn how PartnerBase works">See How It Works</a>
+                    </div>
+
+                    <!-- Credibility Highlights -->
+                    <div class="credibility-highlights mt-5 fade-in" aria-label="Founder credentials">
+                        <div class="d-flex justify-content-center align-items-center flex-wrap">
+                            <div class="credential-item mx-4">
+                                <i class="fas fa-user-tie fa-2x mb-2" aria-hidden="true"></i>
+                                <h5>Created by Eric Torigian</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check-circle text-success me-2" aria-hidden="true"></i> Former Global CHRO</li>
+                                    <li><i class="fas fa-check-circle text-success me-2" aria-hidden="true"></i> Founder of CHRO Solutions & CareerEye</li>
+                                    <li><i class="fas fa-check-circle text-success me-2" aria-hidden="true"></i> 30+ years of executive leadership</li>
+                                    <li><i class="fas fa-check-circle text-success me-2" aria-hidden="true"></i> Advisor to PE-backed and Fortune 5 organizations</li>
+                                    <li><i class="fas fa-check-circle text-success me-2" aria-hidden="true"></i> Expert in fractional HR and executive search</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Proof -->
+                    <div class="social-proof mt-5 fade-in" aria-label="Social proof">
+                        <div class="d-flex justify-content-center align-items-center flex-wrap">
+                            <div class="proof-item mx-4">
+                                <img src="{% static 'marketing/img/lera-logo.png' %}" alt="LERA - Labor and Employment Relations Association" height="40">
+                            </div>
+                            <div class="proof-item mx-4">
+                                <div class="rating" aria-label="5 star rating">
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                    <i class="fas fa-star" aria-hidden="true"></i>
+                                </div>
+                                <small>Early Access Rating</small>
+                            </div>
+                            <div class="proof-stat mx-4">
+                                <strong>500+</strong>
+                                <small>Waitlist Members</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <div class="container">
-        <!-- Why PartnerBase -->
-        <section class="mb-5">
+    <main class="container">
+        <!-- Founder Section -->
+        <section class="founder-section mb-5 py-5" aria-labelledby="founder-title">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="founder-content fade-in">
+                        <span class="badge bg-light text-dark mb-3">About the Founder</span>
+                        <h2 id="founder-title">Built by a Pioneer in Fractional Leadership</h2>
+                        <p class="lead">Eric Torigian has built and run two successful interim/fractional practices, bringing decades of experience in HR and Operations consulting.</p>
+                        <ul class="credentials-list">
+                            <li><i class="fas fa-check-circle text-success" aria-hidden="true"></i> President of LERA (Labor and Employment Relations Association)</li>
+                            <li><i class="fas fa-check-circle text-success" aria-hidden="true"></i> Influential voice in HR & Operations</li>
+                            <li><i class="fas fa-check-circle text-success" aria-hidden="true"></i> Built multiple successful consulting practices</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="founder-image text-center fade-in">
+                        <img src="{% static 'marketing/img/eric-torigian.jpg' %}" alt="Eric Torigian - Founder of PartnerBase" class="rounded-circle mx-auto" width="300" height="300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why PartnerBase Section -->
+        <section id="pain-points" class="mb-5 py-5" aria-labelledby="pain-points-title">
+            <div class="text-center mb-5">
+                <h2 id="pain-points-title" class="fade-in">Why PartnerBase Exists</h2>
+                <p class="lead fade-in">PartnerBase isn't just software. It's the structure behind every high-performing solo executive practice — built by someone who's lived it.</p>
+            </div>
             <div class="row text-center">
-                <div class="col-md-4 mb-3">
-                    <div class="feature-card fade-in">
-                        <div class="card-body">
-                            <h5 class="card-title">Chaos managing clients</h5>
-                            <p class="card-text">No more spreadsheets and scattered notes. Organize everything in one place.</p>
+                <div class="col-md-4 mb-4">
+                    <div class="pain-point-card fade-in">
+                        <div class="icon-wrapper mb-3">
+                            <i class="fas fa-table fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3>You're Delivering Board-Level Value… but Still Using Spreadsheets</h3>
+                        <div class="problem-solution">
+                            <div class="problem mb-3">
+                                <h4 class="text-danger">The Problem</h4>
+                                <p>You're juggling client work, contracts, time logs, and deliverables across email, Google Docs, and sticky notes.</p>
+                            </div>
+                            <div class="solution">
+                                <h4 class="text-success">The PartnerBase Fix</h4>
+                                <p>A clean, executive-grade interface to manage client scope, hours, and impact — with dashboards your clients will love too.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <div class="feature-card fade-in">
-                        <div class="card-body">
-                            <h5 class="card-title">Lack of credibility</h5>
-                            <p class="card-text">Showcase your expertise and build trust with a professional platform.</p>
+                <div class="col-md-4 mb-4">
+                    <div class="pain-point-card featured fade-in">
+                        <div class="icon-wrapper mb-3">
+                            <i class="fas fa-shield-check fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3>You Know You're Credible… But They Don't Know It Yet</h3>
+                        <div class="problem-solution">
+                            <div class="problem mb-3">
+                                <h4 class="text-danger">The Problem</h4>
+                                <p>Independents lose deals not from lack of skill — but from lack of perceived trust.</p>
+                            </div>
+                            <div class="solution">
+                                <h4 class="text-success">The PartnerBase Fix</h4>
+                                <p>Our WorkLedger™ auto-builds your case studies, delivers proof of impact, and shows clients why you're worth every dollar.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <div class="feature-card fade-in">
-                        <div class="card-body">
-                            <h5 class="card-title">Inconsistent pipeline</h5>
-                            <p class="card-text">Keep your pipeline full with tools designed for growth and retention.</p>
+                <div class="col-md-4 mb-4">
+                    <div class="pain-point-card fade-in">
+                        <div class="icon-wrapper mb-3">
+                            <i class="fas fa-chart-line fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3>You're Working Too Hard to Find the Next Client</h3>
+                        <div class="problem-solution">
+                            <div class="problem mb-3">
+                                <h4 class="text-danger">The Problem</h4>
+                                <p>Pipeline stress is real. You're executing and selling at the same time — with no process to follow up or stay top-of-mind.</p>
+                            </div>
+                            <div class="solution">
+                                <h4 class="text-success">The PartnerBase Fix</h4>
+                                <p>Built-in tools to track relationships, generate referrals, and help you stay visible — without feeling like you're selling.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Features -->
-        <section class="mb-5">
-            <h2 class="text-center mb-4 fade-in">Features</h2>
-            <div class="row text-center">
-                <div class="col-md-2 mb-3"><div class="feature-pill fade-in">Proposal Builder</div></div>
-                <div class="col-md-2 mb-3"><div class="feature-pill fade-in">Client Command Center</div></div>
-                <div class="col-md-2 mb-3"><div class="feature-pill fade-in">Time Tracking & Invoicing</div></div>
-                <div class="col-md-3 mb-3"><div class="feature-pill fade-in">WorkLedger Reputation System</div></div>
-                <div class="col-md-3 mb-3"><div class="feature-pill fade-in">Partner Network (IT, Finance, Legal)</div></div>
+        <!-- Features Section -->
+        <section id="how-it-works" class="mb-5 py-5" aria-labelledby="features-title">
+            <div class="text-center mb-5">
+                <h2 id="features-title" class="fade-in">Everything You Need to Run a Firm-Level Practice — Without a Firm</h2>
+                <p class="lead fade-in">Built by someone who's been in the seat — delivering for Fortune 5 boards one week and helping PE-backed carve-outs the next.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-file-contract fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Smart Proposal Builder</h3>
+                        <p>Create polished, scope-aligned proposals in minutes. Branded. Structured. Designed to close.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-tachometer-alt fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Client Command Centers</h3>
+                        <p>Each client gets their own dashboard: deliverables, time logs, notes, documents — all in one place.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-clock fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Time Tracking + Auto Invoicing</h3>
+                        <p>Track hours effortlessly and generate invoices that are professional, transparent, and on time.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-shield-alt fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3>WorkLedger™</h3>
+                        <p>Automatically showcase what you've done, for whom, and the value you've delivered — without writing a single case study.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-bullseye fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Scope + Pipeline Tracker</h3>
+                        <p>Stay on top of every deal, every follow-up, and every potential opportunity — no CRM bloat.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-hands-helping fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <h3>Partner Support Network</h3>
+                        <p>Need legal templates? Tax help? IT setup? Tap into our curated network of providers who specialize in supporting solo operators.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Partner Program -->
-        <section class="mb-5">
-            <h2 class="text-center mb-4 fade-in">Partner Program</h2>
+        <!-- Partner Network Section -->
+        <section class="partner-network mb-5 py-5" aria-labelledby="partner-title">
+            <div class="text-center mb-5">
+                <h2 id="partner-title" class="fade-in">Access Our Elite Partner Network</h2>
+                <p class="lead fade-in">Get instant access to vetted professionals when you need specialized support</p>
+            </div>
             <div class="row text-center">
-                <div class="col-md-3 mb-3"><div class="partner-card fade-in">IT Support</div></div>
-                <div class="col-md-3 mb-3"><div class="partner-card fade-in">Tax Help</div></div>
-                <div class="col-md-3 mb-3"><div class="partner-card fade-in">Legal Docs</div></div>
-                <div class="col-md-3 mb-3"><div class="partner-card fade-in">Teaming</div></div>
+                <div class="col-md-3 mb-4">
+                    <div class="partner-type-card fade-in">
+                        <i class="fas fa-laptop-code mb-3" aria-hidden="true"></i>
+                        <h4>IT Support</h4>
+                        <p>Technical implementation and support services</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="partner-type-card fade-in">
+                        <i class="fas fa-balance-scale mb-3" aria-hidden="true"></i>
+                        <h4>Legal Services</h4>
+                        <p>Contract review and legal documentation</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="partner-type-card fade-in">
+                        <i class="fas fa-chart-pie mb-3" aria-hidden="true"></i>
+                        <h4>Financial Experts</h4>
+                        <p>Tax planning and financial advisory</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="partner-type-card fade-in">
+                        <i class="fas fa-users mb-3" aria-hidden="true"></i>
+                        <h4>Fractional Teams</h4>
+                        <p>Build your dream team on demand</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Waitlist Signup Form -->
-        <section id="waitlist" class="mb-5">
-            <h2 class="text-center mb-4 fade-in">Join the Waitlist</h2>
-            {% if submitted %}
-                <div class="alert alert-success text-center fade-in">Thank you for joining the waitlist!</div>
-            {% else %}
-                <form method="post" class="mx-auto fade-in" style="max-width: 500px;">
-                    {% csrf_token %}
-                    <div class="mb-3">
-                        {{ form.name.label_tag }}
-                        {{ form.name }}
+        <!-- Testimonials -->
+        <section class="testimonials mb-5 py-5" aria-labelledby="testimonials-title">
+            <h2 id="testimonials-title" class="text-center mb-5 fade-in">What Our Early Users Say</h2>
+            <div class="row">
+                <div class="col-md-6 offset-md-3 text-center">
+                    <div class="testimonial-card fade-in">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left fa-2x mb-3 text-muted" aria-hidden="true"></i>
+                            <p class="lead">"PartnerBase is exactly what I've been looking for. It's like having a whole back office team without the overhead."</p>
+                            <div class="testimonial-author">
+                                <h5>Sarah Chen</h5>
+                                <p>Fractional CFO</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        {{ form.email.label_tag }}
-                        {{ form.email }}
-                    </div>
-                    <div class="mb-3">
-                        {{ form.company.label_tag }}
-                        {{ form.company }}
-                    </div>
-                    <div class="mb-3">
-                        {{ form.role.label_tag }}
-                        {{ form.role }}
-                    </div>
-                    <button type="submit" class="btn btn-dark w-100">Join Waitlist</button>
-                </form>
-            {% endif %}
+                </div>
+            </div>
         </section>
-    </div>
+
+        <!-- Waitlist Section -->
+        <section id="waitlist" class="mb-5 py-5" aria-labelledby="waitlist-title">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <div class="waitlist-card fade-in">
+                        <span class="badge bg-warning text-dark mb-3">Limited Time Offer</span>
+                        <h2 id="waitlist-title">Join the Founding Members Waitlist</h2>
+                        <p class="lead mb-4">Get early access and special pricing when we launch. Limited spots available.</p>
+                        
+                        {% if submitted %}
+                            <div class="alert alert-success fade-in" role="alert">
+                                <i class="fas fa-check-circle me-2" aria-hidden="true"></i>
+                                <strong>Thank you for joining!</strong> We'll be in touch soon with exclusive updates.
+                            </div>
+                        {% else %}
+                            <form method="post" class="text-start waitlist-form fade-in" aria-label="Join the waitlist form">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="{{ form.name.id_for_label }}" class="form-label">{{ form.name.label }}</label>
+                                        {{ form.name }}
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="{{ form.email.id_for_label }}" class="form-label">{{ form.email.label }}</label>
+                                        {{ form.email }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="{{ form.role.id_for_label }}" class="form-label">{{ form.role.label }}</label>
+                                        {{ form.role }}
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="{{ form.company.id_for_label }}" class="form-label">{{ form.company.label }}</label>
+                                        {{ form.company }}
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-dark btn-lg w-100">
+                                    Join the Waitlist <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i>
+                                </button>
+                                <small class="text-muted text-center d-block mt-2">
+                                    <i class="fas fa-lock me-1" aria-hidden="true"></i> Your information is secure and will never be shared
+                                </small>
+                            </form>
+                        {% endif %}
+                        
+                        <!-- Trust Badges -->
+                        <div class="trust-badges mt-4" aria-label="Security and privacy badges">
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                                    <small>Bank-Level Security</small>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-user-shield" aria-hidden="true"></i>
+                                    <small>Privacy Protected</small>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-medal" aria-hidden="true"></i>
+                                    <small>Founding Member Benefits</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-light" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>PartnerBase</h5>
+                    <p>The operating system for elite independent professionals.</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Product</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#how-it-works">Features</a></li>
+                        <li><a href="#pain-points">Benefits</a></li>
+                        <li><a href="#waitlist">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Stay Updated</h5>
+                    <p>Follow us for the latest updates and tips for independent professionals.</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#" class="me-3" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <small>&copy; 2024 PartnerBase. All rights reserved.</small>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <small><a href="#privacy">Privacy Policy</a> · <a href="#terms">Terms of Service</a></small>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
