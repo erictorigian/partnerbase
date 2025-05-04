@@ -1,0 +1,109 @@
+/* Custom styles for PartnerBase landing page */
+
+/* Typography */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1a1a1a;
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 6rem 0;
+    border-radius: 0 0 2rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    margin-bottom: 1.5rem;
+}
+
+/* Cards */
+.feature-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Form styling */
+.form-control {
+    border: 2px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #1a1a1a;
+    box-shadow: none;
+}
+
+.btn-dark {
+    background-color: #1a1a1a;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: transform 0.2s ease-in-out;
+}
+
+.btn-dark:hover {
+    transform: translateY(-2px);
+}
+
+/* Features section */
+.feature-pill {
+    background: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid #e2e8f0;
+}
+
+.feature-pill:hover {
+    border-color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+/* Partner section */
+.partner-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero {
+        padding: 4rem 0;
+    }
+} 

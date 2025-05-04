@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PartnerBase – The Consultant's Operating System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CDN (for utility classes) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    {% load static %}
+    <link href="{% static 'marketing/css/styles.css' %}" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero text-center mb-5">
+        <div class="container py-5">
+            <h1 class="fade-in">PartnerBase – The Consultant's Operating System</h1>
+            <p class="lead mb-4 fade-in">Built for fractional executives and solopreneurs.</p>
+            <a href="#waitlist" class="btn btn-dark btn-lg shadow fade-in">Join the Waitlist</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Why PartnerBase -->
+        <section class="mb-5">
+            <div class="row text-center">
+                <div class="col-md-4 mb-3">
+                    <div class="feature-card fade-in">
+                        <div class="card-body">
+                            <h5 class="card-title">Chaos managing clients</h5>
+                            <p class="card-text">No more spreadsheets and scattered notes. Organize everything in one place.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="feature-card fade-in">
+                        <div class="card-body">
+                            <h5 class="card-title">Lack of credibility</h5>
+                            <p class="card-text">Showcase your expertise and build trust with a professional platform.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="feature-card fade-in">
+                        <div class="card-body">
+                            <h5 class="card-title">Inconsistent pipeline</h5>
+                            <p class="card-text">Keep your pipeline full with tools designed for growth and retention.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="mb-5">
+            <h2 class="text-center mb-4 fade-in">Features</h2>
+            <div class="row text-center">
+                <div class="col-md-2 mb-3"><div class="feature-pill fade-in">Proposal Builder</div></div>
+                <div class="col-md-2 mb-3"><div class="feature-pill fade-in">Client Command Center</div></div>
+                <div class="col-md-2 mb-3"><div class="feature-pill fade-in">Time Tracking & Invoicing</div></div>
+                <div class="col-md-3 mb-3"><div class="feature-pill fade-in">WorkLedger Reputation System</div></div>
+                <div class="col-md-3 mb-3"><div class="feature-pill fade-in">Partner Network (IT, Finance, Legal)</div></div>
+            </div>
+        </section>
+
+        <!-- Partner Program -->
+        <section class="mb-5">
+            <h2 class="text-center mb-4 fade-in">Partner Program</h2>
+            <div class="row text-center">
+                <div class="col-md-3 mb-3"><div class="partner-card fade-in">IT Support</div></div>
+                <div class="col-md-3 mb-3"><div class="partner-card fade-in">Tax Help</div></div>
+                <div class="col-md-3 mb-3"><div class="partner-card fade-in">Legal Docs</div></div>
+                <div class="col-md-3 mb-3"><div class="partner-card fade-in">Teaming</div></div>
+            </div>
+        </section>
+
+        <!-- Waitlist Signup Form -->
+        <section id="waitlist" class="mb-5">
+            <h2 class="text-center mb-4 fade-in">Join the Waitlist</h2>
+            {% if submitted %}
+                <div class="alert alert-success text-center fade-in">Thank you for joining the waitlist!</div>
+            {% else %}
+                <form method="post" class="mx-auto fade-in" style="max-width: 500px;">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        {{ form.name.label_tag }}
+                        {{ form.name }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form.email.label_tag }}
+                        {{ form.email }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form.company.label_tag }}
+                        {{ form.company }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form.role.label_tag }}
+                        {{ form.role }}
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100">Join Waitlist</button>
+                </form>
+            {% endif %}
+        </section>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="{% static 'marketing/js/main.js' %}"></script>
+</body>
+</html> 
